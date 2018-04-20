@@ -1,7 +1,7 @@
 {
   "name": "nanpos2",
   "version": "1.0.0",
-  "description": "2nd version of nanpos with vue 2.x and bootstrap 4.x",
+  "description": "The long awaited 2nd version of nanpos with vue 2.x and bootstrap 4.x",
   "author": "Jordi Cerdan <jcerdan@tecob.com>",
   "private": true,
   "scripts": {
