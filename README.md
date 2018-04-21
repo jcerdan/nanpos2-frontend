@@ -1,6 +1,6 @@
 # nanpos2
 
-> 2nd version of nanpos with vue 2.x and bootstrap 4.x
+> 2nd version of nanpos with vue 2.x and Buefy - Bulma ;) among other sueful libraries (I'll make the list when the development wuill be over for the first version)
 
 The long awaited 2nd version of NAN POS is getting close! 
 
