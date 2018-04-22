@@ -78,7 +78,7 @@ export default {
       }
     },
     addTicketLine: function (category) {
-      if (+this.$store.getters.amount > 0) {
+      if (+this.$store.getters.amount !== 0) {
         this.$store.commit('addTicketLine', {
           path: this.path.trim(),
           category: category.trim()

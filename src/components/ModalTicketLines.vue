@@ -83,14 +83,14 @@ export default {
   methods: {
     ...mapMutations({
       delTicketLine: 'delTicketLine'
-    })
-  },
-  printTicket: function (idTickets) {
-    console.log(idTickets)
-    this.$http({url: '/api/tickets/' + idTickets + '/print', method: 'GET'}).then(function (response) {
-      console.log('Sent to printer')
-    })
-    this.emptyCurrentTicket()
+    }),
+    printTicket: function (idTickets) {
+      console.log(idTickets)
+      this.$http({url: '/api/tickets/' + this.ticket.idTickets + '/print', method: 'GET'}).then(function (response) {
+        console.log('Sent to printer')
+      })
+      // this.emptyCurrentTicket()
+    }
   }
 }
 </script>

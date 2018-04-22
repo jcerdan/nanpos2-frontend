@@ -39,9 +39,9 @@ export default new Vuex.Store({
       if (+state.pad.amount !== 0) {
         Vue.set(state.ticketLines, state.numberOfLines, {
           amount: state.pad.amount,
-          discountPercentage: state.pad.discountPercentage,
-          discountAmount: state.pad.discountAmount,
-          quantity: state.pad.quantity,
+          discountPercentage: accounting.toFixed(state.pad.discountPercentage, 2),
+          discountAmount: accounting.toFixed(state.pad.discountAmount, 2),
+          quantity: +state.pad.quantity,
           net: (accounting.toFixed(((+state.pad.amount * +state.pad.quantity) - +state.pad.discountAmount), 2)),
           category: line.path + ' / ' + line.category
         })

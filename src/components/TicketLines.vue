@@ -106,6 +106,9 @@ export default {
       this.$http.post('http://localhost:8081/api/tickets', ticket).then(function (response) {
         console.log('response:', response)
         let ticketID = response.data.result
+        this.$http({url: '/api/tickets/' + ticketID + '/print', method: 'GET'}).then(function (response) {
+          console.log('Sent to printer')
+        })
         this.$store.commit('delTicket')
         this.$http.get('http://localhost:8081/api/tickets/' + ticketID).then(function (response) {
           this.formProps.ticket = response.data

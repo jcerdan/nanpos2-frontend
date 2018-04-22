@@ -153,6 +153,14 @@ export default {
       }, function (response) {
         console.log('error: ' + response)
       })
+    },
+    printTicket: function (idTickets) {
+      this.$http({url: '/api/tickets/' + idTickets + '/print', method: 'GET'}).then(function (response) {
+        console.log(response.data)
+        idTickets = null
+      }, function (response) {
+        console.log('error: ' + response)
+      })
     }
   }
 }

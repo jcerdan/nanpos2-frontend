@@ -115,6 +115,7 @@
 <script>
 import accounting from 'accounting'
 import moment from 'moment'
+moment.locale('ca')
 
 export default {
   data () {
@@ -216,6 +217,33 @@ export default {
         this.closings.list = response.data
       }, function (response) {
         console.log('error: ', response)
+      })
+    },
+    printClosing: function (idClosings) {
+      this.$http({url: '/api/closings/' + idClosings + '/print', method: 'GET'}).then(function (response) {
+        console.log(response.data)
+        this.currentClosing = response.data
+      }, function (response) {
+        console.log('error: ' + response)
+      })
+    },
+    printMonthlyResume: function () {
+      var mes = moment(this.dataClosings)
+      var params = {
+        month: mes.format('MMMM YYYY').toUpperCase(),
+        sum: this.sum,
+        discount: this.discount,
+        taxes: this.tax
+      }
+      this.$http({
+        url: '/api/closings/monthly/print',
+        method: 'GET',
+        params
+      }).then(function (response) {
+        console.log(response.data)
+        this.currentClosing = response.data
+      }, function (response) {
+        console.log('error: ' + response)
       })
     }
   }

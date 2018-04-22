@@ -28,12 +28,12 @@
           </div>
 
           <div class="navbar-end">
-            <a class="navbar-item" href="https://bulma.io/">
-              OBRIR CALAIX
-            </a>
-            <a class="navbar-item" href="https://bulma.io/">
-              ABOUT
-            </a>
+            <router-link to="/ObrirCalaix" class="navbar-item">
+              <i class="fa fa-inbox" aria-hidden="true"></i>&nbsp;OBRIR CALAIX
+            </router-link>
+            <router-link to="/About" class="navbar-item">
+              <i class="fa fa-inbox" aria-hidden="true"></i>&nbsp;ABOUT
+            </router-link>
           </div>
         </div>
       </nav>
@@ -44,7 +44,10 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  methods: {
+    
+  }
 }
 </script>
 
