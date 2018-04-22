@@ -28,11 +28,11 @@
           </div>
 
           <div class="navbar-end">
-            <router-link to="/ObrirCalaix" class="navbar-item">
+            <a href="#" class="navbar-item" v-on:click="openDrawer()">
               <i class="fa fa-inbox" aria-hidden="true"></i>&nbsp;OBRIR CALAIX
-            </router-link>
+            </a>
             <router-link to="/About" class="navbar-item">
-              <i class="fa fa-inbox" aria-hidden="true"></i>&nbsp;ABOUT
+              <i class="fa fa-question" aria-hidden="true"></i>&nbsp;ABOUT
             </router-link>
           </div>
         </div>
@@ -46,7 +46,13 @@
 export default {
   name: 'app',
   methods: {
-    
+    openDrawer: function () {
+      this.$http.get('http://localhost:8081/api/cashdrawer').then(function (response) {
+        console.log('Cash drawer open')
+      }, function (response) {
+        console.log('error: ', response)
+      })
+    }
   }
 }
 </script>

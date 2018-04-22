@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Ticket from '@/components/Ticket'
 import Historic from '@/components/Historic'
 import Tancament from '@/components/Tancament'
+import About from '@/components/About'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/tancaments',
       name: 'Tancament',
       component: Tancament
+    },
+    {
+      path: '/about',
+      name: 'About',
+      component: About
     }
   ]
 })
