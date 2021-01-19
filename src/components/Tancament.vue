@@ -127,7 +127,7 @@ export default {
         list: []
       },
       mesos: ['Gener', 'Febrer', 'Març', 'Abril', 'Maig', 'Juny', 'Juliol', 'Agost', 'Setembre', 'Ocutbre', 'Novembre', 'Desembre'],
-      anys: ['2018', '2017', '2016', '2015'],
+      // anys: ['2018', '2017', '2016', '2015'],
       selectedMonth: moment().month(),
       selectedYear: moment().year(),
       partial: {
@@ -160,6 +160,16 @@ export default {
         return prev + line.taxes
       }, 0)
       return accounting.toFixed(pivot, 2)
+    },
+    anys: function () {
+      let temp = []
+      let anyActual = +moment().format('YYYY') + 1
+      // console.log(anyActual)
+      for (var i = 2015; i < anyActual; i++) {
+        temp.push(i)
+      }
+
+      return temp
     }
   },
   beforeMount: function () {

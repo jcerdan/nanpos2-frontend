@@ -6,7 +6,7 @@ import App from './App'
 import router from './router'
 
 import Buefy from 'buefy'
-import 'buefy/lib/buefy.css'
+import 'buefy/dist/buefy.css'
 import Vue2Filters from 'vue2-filters'
 import VueResource from 'vue-resource'
 import store from './store'
@@ -22,7 +22,7 @@ Vue.use(VueResource)
 // import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 // Vue.use(BootstrapVue)
-Vue.config.productionTip = true
+Vue.config.productionTip = false
 Vue.config.silent = false
 Vue.config.devtools = true
 
