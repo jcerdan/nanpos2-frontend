@@ -163,9 +163,9 @@ export default {
     },
     anys: function () {
       let temp = []
-      let anyActual = +moment().format('YYYY') + 1
-      // console.log(anyActual)
-      for (var i = 2015; i < anyActual; i++) {
+      let anyActual = +moment().format('YYYY')
+      console.log(anyActual)
+      for (var i = anyActual; i >= 2015; i--) {
         temp.push(i)
       }
 

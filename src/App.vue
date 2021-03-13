@@ -46,6 +46,7 @@
 export default {
   name: 'app',
   methods: {
+    /*
     openDrawer: function () {
       this.$http.get('http://localhost:8081/api/cashdrawer').then(function (response) {
         console.log('Cash drawer open')
@@ -53,6 +54,7 @@ export default {
         console.log('error: ', response)
       })
     }
+    */
   }
 }
 </script>
