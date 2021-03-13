@@ -28,9 +28,9 @@
           </div>
 
           <div class="navbar-end">
-            <a href="#" class="navbar-item" v-on:click="openDrawer()">
+            <!--a href="#" class="navbar-item" v-on:click="openDrawer()">
               <i class="fa fa-inbox" aria-hidden="true"></i>&nbsp;OBRIR CALAIX
-            </a>
+            </a-->
             <router-link to="/About" class="navbar-item">
               <i class="fa fa-question" aria-hidden="true"></i>&nbsp;ABOUT
             </router-link>

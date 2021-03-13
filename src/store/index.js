@@ -62,7 +62,7 @@ export default new Vuex.Store({
     },
     delTicketLine: function (state, line) {
       state.ticketLines.splice(line, 1)
-      this.numberOfLines = this.numberOfLines - 1
+      state.numberOfLines = state.numberOfLines - 1
     },
     delTicket: function (state) {
       state.ticketLines = []
