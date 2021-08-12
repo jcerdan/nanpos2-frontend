@@ -9,8 +9,8 @@
 
     <div class="columns is-multiline is-centered is-2">
       <div class="column is-one-quarter" style="margin-bottom: 10px;" v-for="(category, index) in categories.list">
-        <button v-if="category.last == 1" type="button" class="button is-primary is-size-6 is-fullwidth" style="height: 4em !important;" v-on:click="addTicketLine(category.name)">{{ category.name }}</button>
-        <button v-else type="button" class="button is-info is-fullwidth is-size-6" style="height: 4em !important;"  v-on:click="forwardCategory(category)">{{ category.name }}</button>
+        <button v-if="category.last == 1" type="button" class="button is-primary is-size-6 is-fullwidth has-text-black" style="height: 4em !important;" v-on:click="addTicketLine(category.name)">{{ category.name }}</button>
+        <button v-else type="button" class="button is-info is-fullwidth is-size-6 has-text-black" style="height: 4em !important;"  v-on:click="forwardCategory(category)">{{ category.name }}</button>
       </div>
       <button class="button is-danger is-size-6 is-fullwidth" style="height: 4em !important;" v-if="categories.level >= 1" v-on:click="backwardCategory()"> << </button>
     </div>
